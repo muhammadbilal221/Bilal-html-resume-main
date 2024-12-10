@@ -1,0 +1,155 @@
+:root {
+  font-size: 17px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Arial", sans-serif;
+  line-height: 1.3;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #ffffff;
+  color: #111;
+  width: 210mm;
+  height: 297mm;
+}
+li::before {
+  content: "• ";
+  color: #000;
+  margin-left: -1.5rem;
+  padding-right: 0.5rem;
+  font-size: 1.7rem;
+  line-height: 0;
+  position: relative;
+  top: 0.3rem;
+}
+li {
+  list-style: none;
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+  padding-left: 1rem;
+  line-height: 1;
+  text-align: left;
+  list-style: none;
+}
+
+.resume-container {
+  max-width: 56.25rem;
+  margin: 0 auto;
+  padding: 1.25rem;
+}
+h1,
+h2,
+h3 {
+  margin: 0;
+  padding: 0;
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.25rem;
+}
+.header .full-name {
+  font-size: 2rem;
+  color: #000000;
+}
+.header .job-title {
+  font-size: 1rem;
+  font-weight: bold;
+}
+.header .contact-info {
+  text-align: right;
+}
+.header .phone-number,
+.header .email,
+.header .github-and-linkedin,
+.header .location {
+  margin: 0.3125rem 0;
+  font-size: 0.875rem;
+  font-weight: bold;
+}
+a {
+  color: #0056b3;
+  text-decoration: underline;
+}
+.section-title {
+  font-size: 1.25rem;
+  color: #0056b3;
+  text-transform: uppercase;
+  margin-bottom: 0.425rem;
+}
+.section {
+  margin-bottom: 1rem;
+}
+.section .summary-text {
+  margin: 0.625rem 0;
+  font-size: 0.875rem;
+}
+/* List Format for Skills */
+.skills-list-container {
+  display: block;
+  margin-bottom: 1rem;
+  padding-left: 1.5rem;
+}
+/* Chip Format for Skills */
+.skills-chip-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 6px;
+}
+.chip {
+  display: inline-block;
+  padding: 0.2rem 0.5rem;
+  border-radius: 0.5rem;
+  background-color: rgba(0, 86, 179, 0.07);
+  color: #000000;
+  font-size: 0.75rem;
+  font-weight: bold;
+  text-align: center;
+  border: 0.1rem solid rgba(0, 86, 179, 0.9);
+}
+.experience-entry {
+  margin-bottom: 1.5rem;
+}
+.entry {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.625rem;
+}
+.entry .title {
+  flex-grow: 1;
+}
+.entry .dates {
+  font-size: 0.875rem;
+  color: #111;
+  text-align: right;
+}
+.experience-tasks {
+  padding-left: 1.5rem;
+}
+.education-entry,
+.language-proficiency {
+  margin: 0.625rem 0;
+  font-size: 0.875rem;
+}
+/* Added styles for icons */
+.entry-location,
+.entry-dates {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+.entry-location i,
+.entry-dates i {
+  /*margin-right: 0.3rem;*/
+}
+.fas {
+  font-size: 0.7rem; /* You can adjust the size as needed */
+}
