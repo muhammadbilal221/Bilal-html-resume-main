@@ -52,8 +52,8 @@ h3 {
 .header {
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  margin-bottom: 1.25rem;
+  /* align-items: center; */
+  /* margin-bottom: 1.25rem; */
 }
 .header .full-name {
   font-size: 2rem;
@@ -82,14 +82,16 @@ a {
   font-size: 1.25rem;
   color: #0056b3;
   text-transform: uppercase;
-  margin-bottom: 0.425rem;
+  /* margin-bottom: 0.425rem; */
 }
 .section {
   margin-bottom: 1rem;
 }
 .section .summary-text {
-  margin: 0.625rem 0;
+  margin: 0.325rem 0;
   font-size: 0.875rem;
+  text-align: justify;
+  margin-top: 0;
 }
 /* List Format for Skills */
 .skills-list-container {
@@ -115,7 +117,7 @@ a {
   border: 0.1rem solid rgba(0, 86, 179, 0.9);
 }
 .experience-entry {
-  margin-bottom: 1.5rem;
+  margin-bottom: 0.7rem;
 }
 .entry {
   display: flex;
@@ -136,7 +138,7 @@ a {
 }
 .education-entry,
 .language-proficiency {
-  margin: 0.625rem 0;
+  margin: 0.225rem 0;
   font-size: 0.875rem;
 }
 /* Added styles for icons */
