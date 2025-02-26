@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Stylish Two-Column Resume (A4 with Accent Subheadings)</title>
+
+  <!-- Font Awesome (for icons) -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+  />
+
+  <style>
+    /* --------------------------------------------------
+       Minimal CSS Reset
+    ----------------------------------------------------- */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    /* --------------------------------------------------
+       A4 Page Setup
+       Body is exactly A4 size with 40px padding
+    ----------------------------------------------------- */
+    html, body {
+      width: 210mm;
+      height: 297mm;
+      margin: 0 auto;
+      padding: 40px;
+      background-color: #fafafa;
+      font-family: Arial, sans-serif;
+      font-size: 16px;
+      color: #374246;
+      line-height: 1.6;
+      text-align: justify;
+    }
+
+    /* --------------------------------------------------
+       Resume Container
+       White background, box shadow, and slight radius
+    ----------------------------------------------------- */
+    .resume-container {
+      width: 100%;
+      height: 100%;
+      background-color: #fff;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      border-radius: 4px;
+      overflow: hidden;
+      /* No extra margin or padding; the body already has 40px */
+    }
+
+    /* --------------------------------------------------
+       Header
+    ----------------------------------------------------- */
+    .header-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px; /* Some padding inside the header */
+      border-bottom: 1px solid #eee;
+    }
+
+    .header-left {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .header-left h1 {
+      margin: 0;
+      font-size: 32px;
+      font-weight: bold;
+      color: #333333;
+    }
+
+    .subtitle {
+      margin-top: 6px;
+      font-size: 18px;
+      color: #00b5cb;
+    }
+
+    .contact-info {
+      margin-top: 10px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8px;
+      font-size: 14px;
+    }
+
+    .contact-info i {
+      color: #00b5cb;
+      margin-right: 4px;
+    }
+
+    .bold-text {
+      font-weight: bold;
+      color: #374246;
+    }
+
+    .header-right img {
+      width: 90px;
+      height: 90px;
+      border-radius: 50%;
+      object-fit: cover;
+      object-position: center;
+    }
+
+    /* --------------------------------------------------
+       Main Content
+    ----------------------------------------------------- */
+    .main-content {
+      padding: 20px;
+    }
+
+    /* --------------------------------------------------
+       Two-column Layout
+    ----------------------------------------------------- */
+    .content-columns {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+    }
+
+    .left-column {
+      flex: 1 1 65%;
+      min-width: 320px;
+    }
+
+    .right-column {
+      flex: 1 1 30%;
+      min-width: 250px;
+    }
+
+    /* --------------------------------------------------
+       Sections
+       Accent border + accent bullet markers
+    ----------------------------------------------------- */
+    .section {
+      margin-bottom: 20px;
+      padding-left: 10px;
+      border-left: 3px solid #00b5cb;
+    }
+
+    .section-title {
+      font-size: 1.1rem;
+      font-weight: bold;
+      color: #333333;
+      margin: 0;
+      text-transform: uppercase;
+    }
+
+    .section-line {
+      width: 100%;
+      height: 3px;
+      background-color: #00b5cb;
+      margin: 0;
+    }
+
+    .section > p,
+    .section ul {
+      margin-top: 8px;
+    }
+
+    .section ul {
+      list-style-type: disc;
+      padding-left: 20px;
+    }
+    .section ul li::marker {
+      color: #00b5cb;
+    }
+
+    .section li {
+      margin-bottom: 6px;
+    }
+
+    /* --------------------------------------------------
+       Subheading Classes for Education/Experience
+       So institution/company & date are accent & bold
+    ----------------------------------------------------- */
+    .subheading {
+      color: #00b5cb;
+      font-weight: bold;
+    }
+    .dates {
+      margin-left: 8px;
+      color: #00b5cb;
+      font-weight: bold;
+    }
+
+    /* A bit of spacing below each subheading line */
+    .subheading-block {
+      margin-bottom: 4px;
+    }
+  </style>
+</head>
+<body>
+
+<div class="resume-container">
+
+  <!-- Header -->
+  <div class="header-container">
+    <div class="header-left">
+      <h1>MUHAMMAD BILAL</h1>
+      <p class="subtitle">Mechanical Engineer | Simulation and Design | DAAD Scholar</p>
+      
+      <div class="contact-info">
+        <p>
+          <i class="fa-regular fa-envelope"></i>
+          <span class="bold-text">mbilal2642000@gmail.com</span>
+        </p>
+        <p>
+          <i class="fa-brands fa-linkedin"></i>
+          <span class="bold-text">linkedin.com/in/muhammad-bilal27</span>
+        </p>
+        <p>
+          <i class="fa-solid fa-phone"></i>
+          <span class="bold-text">+491629556815</span>
+        </p>
+        <p>
+          <i class="fa-solid fa-location-dot"></i>
+          <span class="bold-text">Aachen, Germany</span>
+        </p>
+      </div>
+    </div>
+    <div class="header-right">
+      <img src="./head.png" alt="Profile Photo">
+    </div>
+  </div>
+
+  <!-- Main Content -->
+  <div class="main-content">
+
+    <div class="content-columns">
+
+      <!-- Left Column -->
+      <div class="left-column">
+        
+        <!-- Summary Section -->
+        <div class="section">
+          <div class="section-title">Summary</div>
+          <div class="section-line"></div>
+          <p>
+            Results-driven and detail-oriented software engineer with 5+ years of experience in developing full-stack web applications. Proficient in modern JavaScript frameworks, microservices architecture, and cloud deployment strategies. Eager to deliver high-quality, scalable solutions to complex challenges.
+          </p>
+        </div>
+
+        <!-- Education Section -->
+        <div class="section">
+          <div class="section-title">Education</div>
+          <div class="section-line"></div>
+          
+          <!-- Example of subheadings for Education -->
+          <div class="subheading-block">
+            <p><strong>BSc in Computer Science</strong></p>
+            <p>
+              <span class="subheading">University of Example</span>
+              <span class="dates">2012 - 2016</span>
+            </p>
+          </div>
+          <ul>
+            <li>Graduated with Honors (3.8/4.0 GPA)</li>
+            <li>Focused on Software Engineering and Data Structures</li>
+          </ul>
+          
+          <div class="subheading-block" style="margin-top: 10px;">
+            <p><strong>High School Diploma</strong></p>
+            <p>
+              <span class="subheading">Example High School</span>
+              <span class="dates">2008 - 2012</span>
+            </p>
+          </div>
+          <ul>
+            <li>Excelled in Math and Computer Science courses</li>
+          </ul>
+        </div>
+
+        <!-- Experience Section -->
+        <div class="section">
+          <div class="section-title">Experience</div>
+          <div class="section-line"></div>
+          
+          <!-- Example of subheadings for Experience -->
+          <div class="subheading-block">
+            <p><strong>Senior Software Engineer</strong></p>
+            <p>
+              <span class="subheading">ExampleCorp, New York</span>
+              <span class="dates">2019 - Present</span>
+            </p>
+          </div>
+          <ul>
+            <li>Led a team of 4 developers to build a microservices-based architecture handling 1M daily requests.</li>
+            <li>Reduced page load times by 40% through server-side rendering and optimized caching.</li>
+            <li>Implemented CI/CD pipelines using Jenkins and Docker to streamline deployments.</li>
+          </ul>
+
+          <div class="subheading-block" style="margin-top: 10px;">
+            <p><strong>Software Engineer</strong></p>
+            <p>
+              <span class="subheading">TechStart Inc.</span>
+              <span class="dates">2016 - 2019</span>
+            </p>
+          </div>
+          <ul>
+            <li>Developed RESTful APIs in Node.js and Express, integrated with a NoSQL database.</li>
+            <li>Collaborated with frontend teams to build responsive React single-page applications.</li>
+            <li>Improved security by implementing JWT authentication and secure data handling.</li>
+          </ul>
+        </div>
+
+        <!-- Projects Section -->
+        <div class="section">
+          <div class="section-title">Projects</div>
+          <div class="section-line"></div>
+          
+          <div class="subheading-block">
+            <p><strong>Open-Source Contribution (React Community)</strong></p>
+            <p>
+              <span class="subheading">Personal Initiative</span>
+              <span class="dates">2021</span>
+            </p>
+          </div>
+          <ul>
+            <li>Contributed to the React DevTools extension with performance improvements.</li>
+            <li>Collaborated with community maintainers to review pull requests and resolve issues.</li>
+          </ul>
+
+          <div class="subheading-block" style="margin-top: 10px;">
+            <p><strong>Real-Time Chat Application</strong></p>
+            <p>
+              <span class="subheading">Node.js, React, AWS</span>
+              <span class="dates">2020</span>
+            </p>
+          </div>
+          <ul>
+            <li>Built a real-time chat app using Socket.IO and deployed on AWS with load balancing.</li>
+            <li>Supported up to 10,000 concurrent users with minimal latency.</li>
+          </ul>
+        </div>
+
+      </div><!-- End Left Column -->
+
+      <!-- Right Column -->
+      <div class="right-column">
+        
+        <!-- Skills -->
+        <div class="section">
+          <div class="section-title">Skills</div>
+          <div class="section-line"></div>
+          <ul>
+            <li><strong>Languages:</strong> JavaScript, TypeScript, Python, C++</li>
+            <li><strong>Frameworks:</strong> Node.js, React, Express, Django</li>
+            <li><strong>Tools:</strong> Docker, Jenkins, Git, AWS</li>
+            <li><strong>Databases:</strong> MongoDB, PostgreSQL</li>
+          </ul>
+        </div>
+
+        <!-- Key Achievements -->
+        <div class="section">
+          <div class="section-title">Key Achievements</div>
+          <div class="section-line"></div>
+          <ul>
+            <li>Developed a microservice handling 200K API calls/day with 99.9% uptime.</li>
+            <li>Awarded “Employee of the Year” at ExampleCorp (2021).</li>
+            <li>Published a technical blog on scaling Node.js apps to thousands of users.</li>
+          </ul>
+        </div>
+
+        <!-- Certifications -->
+        <div class="section">
+          <div class="section-title">Certifications</div>
+          <div class="section-line"></div>
+          <ul>
+            <li>AWS Certified Solutions Architect – Associate</li>
+            <li>Oracle Certified Professional, Java SE 8 Programmer</li>
+          </ul>
+        </div>
+
+        <!-- Volunteering -->
+        <div class="section">
+          <div class="section-title">Volunteering</div>
+          <div class="section-line"></div>
+          <ul>
+            <li><strong>Code for Community (2020 - Present):</strong> Mentored high school students in web dev projects.</li>
+            <li><strong>Open Source Meetup (2018 - Present):</strong> Organized monthly sessions for newcomers to contribute to open-source.</li>
+          </ul>
+        </div>
+
+      </div><!-- End Right Column -->
+
+    </div><!-- End .content-columns -->
+  </div><!-- End .main-content -->
+
+</div><!-- End .resume-container -->
+
+</body>
+</html>

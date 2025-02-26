@@ -1,0 +1,678 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <title>MUHAMMAD BILAL - A4 Compact Resume</title>
+      <!-- Font Awesome (for icons) -->
+      <link
+         rel="stylesheet"
+         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+         />
+      <style>
+        @media print {
+  /* Instead of trying to control the page margins via @page,
+     apply margins to the body or a container element */
+  body {
+    margin: 40px !important;
+    /* Or use padding if more appropriate */
+    /* padding: 40px !important; */
+  }
+}
+
+@media print {
+         @page {
+         margin-top: 20px;   /* Adjust as needed */
+         margin-bottom: 20px;
+         /* Optionally set left and right margins */
+         margin-left: 20px;
+         margin-right: 20px;
+         }
+         }
+
+
+
+         @media screen {
+  .resume-container {
+   margin-top: 20px;   /* Adjust as needed */
+   margin-bottom: 20px;
+   margin-left: 20px;
+   margin-right: 20px;
+  }
+}
+         /*************************************************************
+         *  A4 PAGE SETUP
+         *************************************************************/
+         html, body {
+         width: 210mm;
+         margin: 0;
+         padding: 0;
+         background-color: #ffffff;
+         font-family: Arial, sans-serif;
+         font-size: 13px;
+         line-height: 1.1; /* Tighter spacing to match the target style */
+         color: #374246;
+         text-align: justify;
+         }
+
+         .resume-container {
+         /* width: calc(210mm - 30mm);  */
+         /* 15mm margins each side */
+         /* height: calc(297mm - 30mm); */
+         /* margin: 15mm auto; */
+         position: relative;
+         }
+         /*************************************************************
+         *  HEADER (Unchanged)
+         *************************************************************/
+         .header-container {
+         display: flex;
+         justify-content: space-between;
+         align-items: center;
+         margin-bottom: 12px;
+         }
+         .header-left {
+         display: flex;
+         flex-direction: column;
+         }
+         .header-left h1 {
+         margin: 0;
+         font-size: 30px;
+         font-weight: bold;
+         color: #333333;
+         }
+         .subtitle {
+         margin-top: 2px;
+         margin-bottom: 0;
+         font-size: 22px;
+         color: #00b5cb;
+         }
+         .contact-info {
+         margin-top: 6px;
+         display: grid;
+         grid-template-columns: 1fr 1fr;
+         gap: 4px;
+         font-size: 14px;
+         }
+         .contact-info p {
+         margin: 2px;
+         }
+         .contact-info i {
+         color: #00b5cb;
+         margin-right: 4px;
+         }
+         .bold-text {
+         font-weight: bold;
+         color: #374246;
+         }
+         .header-right img {
+         width: 60px;
+         height: 60px;
+         border-radius: 50%;
+         object-fit: cover;
+         object-position: center;
+         }
+         /*************************************************************
+         *  TWO-COLUMN LAYOUT
+         *************************************************************/
+         .content-columns {
+         display: flex;
+         gap: 4%; /* small gap between columns */
+         }
+         .left-column {
+         width: 58%;
+         }
+         .right-column {
+         width: 37%;
+         }
+         /*************************************************************
+         *  SECTION STYLES
+         *************************************************************/
+         .section {
+         margin-bottom: 8px;  /* minimal spacing between sections */
+         }
+         .section-title {
+         font-size: 12px;
+         font-weight: bold;
+         color: #333333;
+         text-transform: uppercase;
+         margin: 0;
+         line-height: 1.2; /* slight separation for the title itself */
+         margin-top: 15px;
+         }
+         .section-line {
+         width: 100%;
+         height: 3px;
+         background-color: #333333;
+         margin: 3px 0;
+         margin-bottom: 5px;
+         }
+         /* Subheadings (degree or job titles) in black */
+         .degree-title,
+         .job-title {
+         font-weight: bold;
+         font-size: 12px;
+         margin: 0 0 2px 0;
+         color: #333333;
+         }
+         /* Second accent line in teal (e.g., institution or company) */
+         .accent-line {
+         color: #00b5cb;
+         margin: 2px 0;
+         font-size: 12px;
+         }
+         /* Date / location line in italic */
+         .time-place {
+         font-style: italic;
+         font-size: 11px;
+         color: #374246;
+         display: flex;
+         justify-content: space-between;
+         margin-bottom: 2px;
+         }
+         .time-place span {
+         /* margin-left: 10px; */
+         }
+         /* Tighter spacing for paragraphs/lists in sections */
+         .section > p,
+         .section ul {
+         margin-top: 2px;
+         margin-bottom: 2px;
+         }
+         .section ul {
+         list-style-type: circle;
+         padding-left: 8px;
+         }
+         .section li {
+         margin-bottom: 2px;
+         }
+         /* Slight negative indent for bullet points */
+         .section ul li {
+         /* text-indent: -4px; */
+         margin-left:11px;
+         }
+         .text-black {
+         color:#374246
+         }
+         .skill-item{
+         position: relative;
+         white-space: nowrap;
+         height: 20px;
+         display: inline-block;
+         /* font-weight: bold; */
+         font-style: italic;
+         }
+         .skill-item::after {
+         position: absolute;
+         content: "";
+         display: inline-block; /* Ensures the pseudo-element behaves like a block element */
+         width: 100%;
+         height: 100%;
+         border-bottom: 2px solid #a8a8a8; /* Adds the red bottom border */
+         left: 0;
+         bottom: 3px;
+         }
+         .dotted-line{
+            border-bottom: 1px dashed #cccccc;
+         }
+      </style>
+   </head>
+   <body>
+      <div class="resume-container print-container0">
+         <!-- HEADER (No Changes) -->
+         <div class="header-container">
+            <div class="header-left">
+               <h1>MUHAMMAD BILAL</h1>
+               <p class="subtitle">Mechanical Engineer | Simulation and Design | DAAD Scholar</p>
+               <div class="contact-info">
+                  <p>
+                     <i class="fa-regular fa-envelope"></i>
+                     <span class="bold-text">mbilal2642000@gmail.com</span>
+                  </p>
+                  <p>
+                     <i class="fa-brands fa-linkedin"></i>
+                     <span class="bold-text">linkedin.com/in/muhammad-bilal27</span>
+                  </p>
+                  <p>
+                     <i class="fa-solid fa-phone"></i>
+                     <span class="bold-text">491629556815</span>
+                  </p>
+                  <p>
+                     <i class="fa-solid fa-location-dot"></i>
+                     <span class="bold-text">Aachen, Germany</span>
+                  </p>
+               </div>
+            </div>
+            <img src="./head.png" alt="Profile Photo" style="height: 100px; width: 100px; border-radius: 500px;">
+            
+         </div>
+         <!-- CONTENT COLUMNS -->
+         <div class="content-columns">
+            <!-- LEFT COLUMN -->
+            <div class="left-column">
+               <!-- SUMMARY -->
+               <div class="section">
+                  <div class="section-title">Summary</div>
+                  <div class="section-line"></div>
+                  <p style="line-height: 1.1;">
+                     Mechanical Engineer with expertise in CAD modeling, FEA simulations, and 
+                     CFD analysis for optimizing mechanical system designs. Hands-on 
+                     experience in aerospace and automotive sectors, specializing in developing 
+                     lightweight, high-strength, and thermally efficient components. Proficient in 
+                     ANSYS, Abaqus, LSDYNA, and SolidWorks, leveraging simulation-driven 
+                     insights—including FEA and CFD simulations—to enhance aerodynamics, 
+                     thermal performance, and structural integrity. Strong problem-solving skills 
+                     with a track record of collaborating in multidisciplinary teams to develop 
+                     innovative, efficient, and manufacturable engineering solutions.
+                  </p>
+               </div>
+               <!-- EDUCATION (Unchanged from your provided code) -->
+               <div class="section">
+                  <h2 style="font-size:14px;  font-weight:bold; color:#333; text-transform:uppercase;"
+                  class="section-title"
+                  >EDUCATION</h2>
+                  <div style="width:100%; height:2px; background-color:#333; margin:4px 0;"></div>
+                  <!-- Master's -->
+                  <div style="font-size:13px; font-weight:normal; color:#333; margin-top:6px; margin-bottom:3px">
+                     <strong>Masters in Mechanical Engineering Simulation &amp; Design</strong>
+                  </div>
+                  <div style="color:#00b5cb; font-size:13px;">
+                     HGD; RWTH Aachen – Germany | TGGS Bangkok
+                  </div>
+                  <div style="font-size:12px; color:#333; margin-top:2px; display: flex; align-items: center;">
+                     
+                     <i class="fa-solid fa-calendar-days text-black" style="width: 12px; font-size: 8px;"></i>
+                    
+                     07/2023 - 08/2025
+                  </div>
+                  <ul style="margin-top:4px;">
+                     <li style="font-size:12px; color:#333;">
+                        <strong>First Class Honors (1:1) Graduate</strong>
+                     </li>
+                     <li style="font-size:12px; color:#333;">
+                        <strong>Thesis:</strong>
+                        Experimental and Numerical study of Supersonic Jets concerning Reusable Rocket Vehicles.
+                     </li>
+                  </ul>
+<div class="dotted-line" style="position: relative; top: 3px;" ></div>
+                  <!-- Bachelor's -->
+                  <div style="font-size:13px; font-weight:normal; color:#333; margin-top:6px; margin-bottom:3px">
+                     <strong>BS Mechanical Engineering</strong>
+                  </div>
+                  <div style="color:#00b5cb; font-size:13px;">
+                     Pakistan Institute of Engineering and Applied Sciences (PIEAS)
+                  </div>
+                  <div style="font-size:12px; color:#333; margin-top:2px; display: flex; align-items: center;">
+                     
+                     <i class="fa-solid fa-calendar-days text-black" style="width: 12px; font-size: 8px;"></i>
+                    
+                     09/2017 - 07/2021
+                  </div>
+                  <ul style="margin-top:4px;">
+                     <li style="font-size:12px; color:#333;">
+                        <strong>First Class Honors (1:1) Graduate</strong>
+                     </li>
+                     <li style="font-size:12px; color:#333;">
+                        <strong>Thesis:</strong>
+                        Design and Fabrication of a Horizontal Axis Wind Turbine for Off-Grid Power Solutions.
+                     </li>
+                  </ul>
+               </div>
+               <!-- END EDUCATION SECTION -->
+               <!-- EXPERIENCE -->
+               <div class="section">
+                  <div class="section-title">Experience</div>
+                  <div class="section-line"></div>
+                  <!-- Master's Internship -->
+                  <div class="job-title">Master's Internship</div>
+                  <div class="accent-line">Chair for High Pressure Gas Dynamics</div>
+                  <div class="time-place">
+                     <span>Aachen, Germany</span>
+                     <span>08/2024 - 02/2025</span>
+                  </div>
+                  <ul>
+                     <li>Experimental and Numerical investigation of supersonic impinging jets for VTOL vehicles.</li>
+                     <li>Implemented Schlieren imaging and pressure measurements for aerodynamic behavior assessment.</li>
+                     <li>Developed HPC-based simulations for shock waves, vortex formation, and supersonic flow interactions.</li>
+                     <li>Performed CFD and FEA (ANSYS Workbench, SolidWorks) to validate aerodynamic and thermal effects.</li>
+                     <li>Designed/optimized 3D CAD models ensuring structural integrity and manufacturability.</li>
+                  </ul>
+
+                  <div class="dotted-line" style="position: relative; top: 3px;" ></div>
+
+                  <!-- Design Engineer -->
+                  <div class="job-title" style="margin-top: 4px;">Design Engineer</div>
+                  <div class="accent-line">National Aerospace Science and Technology Park</div>
+                  <div class="time-place">
+                     <span>Islamabad, Pakistan</span>
+                     <span>06/2022 - 06/2023</span>
+                  </div>
+                  <ul>
+                     <li>Designed/optimized aerospace components using CATIA V5, SolidWorks, and ANSYS Workbench.</li>
+                     <li>Performed structural, fatigue, and thermal FEA under high-speed, extreme operational conditions.</li>
+                     <li>Conducted CFD simulations to improve flow characteristics and reduce drag.</li>
+                     <li>Led cross-functional teams to integrate aerodynamic and mechanical components seamlessly.</li>
+                     <li>Developed/interpreted technical drawings with GD&amp;T for design/manufacturing precision.</li>
+                  </ul>
+               </div>
+               <!-- ADDITIONAL EXPERIENCE -->
+               <div class="section">
+                  <div class="section-title">Additional Experience</div>
+                  <div class="section-line"></div>
+                  <!-- SNGPL -->
+                  <div class="job-title">Engineering Intern</div>
+                  <div class="accent-line">SNGPL (Sui Northern Gas Pipelines Limited)</div>
+                  <div class="time-place">
+                     <span>Multan, Pakistan</span>
+                     <span>08/2020 - 01/2021</span>
+                  </div>
+                  <ul>
+                     <li>Assisted in structural evaluation of gas pipeline networks using FEA simulations.</li>
+                     <li>Conducted material testing and failure analysis for pipeline safety.</li>
+                     <li>Prepared technical documentation for mechanical design evaluations.</li>
+                  </ul>
+                  <div class="dotted-line" style="position: relative; top: 3px;" ></div>
+
+                  <!-- Quality Assurance Intern -->
+                  <div class="job-title" style="margin-top: 4px;">Quality Assurance Intern</div>
+                  <div class="accent-line">Pakistan Elektron Limited (PEL), Multan</div>
+                  <div class="time-place">
+                     <span>Multan, Pakistan</span>
+                     <span>05/2019 - 12/2019</span>
+                  </div>
+                  <ul>
+                     <li>Assisted in quality assurance and manufacturing processes for mechanical components.</li>
+                     <li>Optimized design parameters to improve product reliability and sustainability.</li>
+                     <li>Contributed to a project focused on reducing emissions through design improvements.</li>
+                  </ul>
+               </div>
+               <!-- PROJECTS -->
+               <div class="section">
+                  <div class="section-title">Projects</div>
+                  <div class="section-line"></div>
+                  <!-- Wind Turbine Blade -->
+                  <div class="job-title" style="color:#00b5cb; ">Wind Turbine Blade Optimization – CFD &amp; FEA</div>
+                  <!-- <div class="accent-line">(Date not specified)</div> -->
+                  <ul>
+                     <li>Designed/fabricated a Horizontal Axis Wind Turbine for efficient energy generation.</li>
+                     <li>Performed fluid-structure interaction (FSI) to ensure integrity under extreme wind loads.</li>
+                     <li>Published in an IEEE Conference with validated experimental data.</li>
+                  </ul>
+
+
+                  <div class="dotted-line" style="position: relative; top: 0px; margin-block: 4px;" ></div>
+
+                  <!-- Automated Seed Sowing Machine -->
+                  <div class="job-title" style="color:#00b5cb; ">Design of Automated Seed Sowing Machine</div>
+
+                  <!-- <div class="job-title" style="margin-top: 4px;">Design of Automated Seed Sowing Machine</div> -->
+                  <!-- <div class="accent-line">(Date not specified)</div> -->
+                  <ul>
+                     <li>Developed a mechanically automated seed sowing machine using Creo Parametric.</li>
+                     <li>Engineered a modular system for adjustable seeding depth and spacing.</li>
+                     <li>Performed structural analysis (ANSYS Workbench) for real-world agricultural conditions.</li>
+                  </ul>
+                  <div class="dotted-line" style="position: relative; top: 0px; margin-block: 4px;" ></div>
+
+                  <!-- Structural & Fatigue Analysis -->
+                  <div class="job-title" style="color:#00b5cb; ">Structural &amp; Fatigue Analysis of Aerospace Components</div>
+
+                  <!-- <div class="job-title" style="margin-top: 4px;">Structural &amp; Fatigue Analysis of Aerospace Components</div> -->
+                  <!-- <div class="accent-line">(Date not specified)</div> -->
+                  <ul>
+                     <li>Designed/fabricated a human-powered vehicle (HPV) for aerodynamic efficiency and integrity.</li>
+                     <li>Created 3D CAD models (SolidWorks, CATIA V5) ensuring manufacturability and load capacity.</li>
+                     <li>Performed FEA (ANSYS Workbench) to assess durability, fatigue resistance, and crash safety.</li>
+                  </ul>
+               </div>
+            </div>
+            <!-- END LEFT COLUMN -->
+            <!-- RIGHT COLUMN -->
+            <div class="right-column">
+               <!-- SKILLS (Updated to match the sample image) -->
+               <div class="section" style="text-align:left;">
+                  <!-- Heading style consistent with the rest -->
+                  <h2 style="font-size:14px; font-weight:bold; color:#333; text-transform:uppercase;"
+                  class="section-title"
+                  >SKILLS</h2>
+                  <div class="section-line "></div>
+                  <div style="display: flex; flex-wrap: wrap; column-gap: 16px; row-gap: 10px;">
+                     <span class="skill-item">Mechanical Design</span>
+                     <span class="skill-item">FEA Simulation</span>
+                     <span class="skill-item">CFD Analysis</span>
+                     <span class="skill-item">Fatigue Analysis</span>
+                     <span class="skill-item">Thermal Analysis</span>
+                     <span class="skill-item">ANSYS</span>
+                     <span class="skill-item">Workbench</span>
+                     <span class="skill-item">Discovery</span>
+                     <span class="skill-item">Fluent</span>
+                     <span class="skill-item">LS-DYNA</span>
+                     <span class="skill-item">Abaqus</span>
+                     <span class="skill-item">Tecplot</span>
+                     <span class="skill-item">ParaView</span>
+                     <span class="skill-item">FEMAP</span>
+                     <span class="skill-item">CAD</span>
+                     <span class="skill-item">3D Modelling</span>
+                     <span class="skill-item">SolidWorks</span>
+                     <span class="skill-item">CATIA V5</span>
+                     <span class="skill-item">Creo</span>
+                     <span class="skill-item">Autodesk</span>
+                     <span class="skill-item">Prototyping and Testing</span>
+                     <span class="skill-item">GD &amp; T</span>
+                     <span class="skill-item">Technical Drawings</span>
+                     <span class="skill-item">Layout Design</span>
+                     <span class="skill-item">ASME &amp; ISO Standards</span>
+                     <span class="skill-item">Project Management</span>
+                     <span class="skill-item">Report Writing</span>
+                     <span class="skill-item">Technical Documentation</span>
+                     <span class="skill-item">MATLAB</span>
+                     <span class="skill-item">C++</span>
+                     <span class="skill-item">Python</span>
+                     <span class="skill-item">MS Office</span>
+                  </div>
+               </div>
+               <!-- LANGUAGES -->
+               <div class="section">
+                  <div class="section-title">Languages</div>
+                  <div class="section-line"></div>
+                  <ul style="list-style: none; margin: 0; padding: 0; font-family: Arial, sans-serif;">
+                     <li style="display: flex; justify-content: space-between; align-items: center;">
+                       <strong>English</strong>
+                       <span>C1 – Proficient</span>
+                     </li>
+                     <hr style="border: none; border-top: 1px dotted #999; ">
+                     <li style="display: flex; justify-content: space-between; align-items: center;">
+                       <strong>German</strong>
+                       <span>B1 – Intermediate</span>
+                     </li>
+                   </ul>
+                   
+               </div>
+               <!-- KEY ACHIEVEMENTS -->
+               <div class="section">
+                  <div class="section-title" style="font-size: 1.3em; font-weight: bold; margin-bottom: 5px;">Key Achievements</div>
+                  <div class="section-line" style="height: 2px; background: #ccc; margin-bottom: 10px;"></div>
+                  
+                  <div style="margin-bottom: 10px;">
+                    <p style="margin: 0; display: flex; align-items: center; font-weight: bold; font-size: 1em; margin-bottom: 3px;">
+                      <i class="fa-solid fa-globe" style="margin-right: 5px; color: #00b5cb"></i>
+                      Global Exchange Program
+                    </p>
+                    <p style="margin: 0;">Collaboration with 20+ countries on interdisciplinary challenges.</p>
+                  </div>
+                  <div class="dotted-line" style="position: relative; top: -3px;" ></div>
+
+                  
+                  <div style="margin-bottom: 10px;">
+                     <p style="margin: 0; display: flex; align-items: center; font-weight: bold; font-size: 1em; margin-bottom: 3px;">
+                        <i class="fa-solid fa-newspaper" style="margin-right: 5px; color: #00b5cb"></i>
+                      IEEE Publication
+                    </p>
+                    <p style="margin: 0;">Diffuser-Augmented Wind Turbine at an IEEE Conference.</p>
+                  </div>
+
+                  <div class="dotted-line" style="position: relative; top: -3px;" ></div>
+
+                  
+                  <div style="margin-bottom: 10px;">
+                     <p style="margin: 0; display: flex; align-items: center; font-weight: bold; font-size: 1em; margin-bottom: 3px;">
+                        <i class="fa-solid fa-graduation-cap" style="margin-right: 5px; color: #00b5cb"></i>
+                      TGGS DAAD Scholarship
+                    </p>
+                    <p style="margin: 0;">Fully funded for academic excellence in engineering.</p>
+                  </div>
+                  
+                  <div class="dotted-line" style="position: relative; top: -3px;" ></div>
+
+                  <div>
+                     <p style="margin: 0; display: flex; align-items: center; font-weight: bold; font-size: 1em; margin-bottom: 3px;">
+                        <i class="fa-solid fa-laptop" style="margin-right: 5px; color: #00b5cb"></i>
+                      Award of Laptop
+                    </p>
+                    <p style="margin: 0;">Prime Minister Laptop Scheme for outstanding students.</p>
+                  </div>
+                </div>
+                
+                
+               <!-- CERTIFICATIONS -->
+               <div style="font-family: Arial, sans-serif;">
+                  <!-- Section Title -->
+                  <div style="font-size: 1em; font-weight: bold; margin-bottom: 5px; text-transform: uppercase;">
+                    Certifications
+                  </div>
+                  <!-- Horizontal Line -->
+                  <div style="height: 2px; background: #000; margin-bottom: 15px;"></div>
+                
+                  <!-- Certification 1 -->
+                  <div style="margin-bottom: 8px; ">
+                    <p style="margin: 0; color: #00b5cb; font-weight: bold; font-size: 1em; margin-bottom: 2px;">
+                      Six Sigma Black Belt Certification
+                    </p>
+                    <p style="margin: 0 0 5px 0;">
+                      Advanced expertise in process optimization, quality control, and operational efficiency.
+                    </p>
+                    <!-- Dotted Line Separator -->
+                    <div class="dotted-line" style="position: relative; top: 3px;" ></div>
+                  </div>
+                
+                  <!-- Certification 2 -->
+                  <div style="margin-bottom: 8px;">
+                    <p style="margin: 0; color: #00b5cb; font-weight: bold; font-size: 1em; margin-bottom: 2px;">
+                      PLM Certification
+                    </p>
+                    <p style="margin: 0 0 5px 0;">
+                      Product Lifecycle Management (3DEXPERIENCE) for CAD model management and workflow optimization.
+                    </p>
+                    <div class="dotted-line" style="position: relative; top: 3px;" ></div>
+                  </div>
+                
+                  <!-- Certification 3 -->
+                  <div style="margin-bottom: 8px;">
+                    <p style="margin: 0; color: #00b5cb; font-weight: bold; font-size: 1em; margin-bottom: 2px;">
+                      Project Management Professional (PMP)
+                    </p>
+                    <p style="margin: 0 0 5px 0;">
+                      Industry-standard certification for project planning, execution, and risk management.
+                    </p>
+                  </div>
+                </div>
+                
+               <!-- VOLUNTEERING -->
+               <div style="font-family: Arial, sans-serif;">
+                  <!-- Section Title -->
+                  <div style="font-size: 1em; font-weight: bold; margin-bottom: 5px; text-transform: uppercase;">
+                    Volunteering
+                  </div>
+                  <!-- Horizontal Line -->
+                  <div style="height: 2px; background: #000; margin-bottom: 15px;"></div>
+                
+                  <!-- Volunteer Educator -->
+                  <div style="margin-bottom: 8px;">
+                    <p style="margin: 0; font-weight: bold; color: #000; font-size: 1em;">
+                      Volunteer Educator
+                    </p>
+                    <p style="margin: 0 0 5px 0; color: #00b5cb; font-weight: bold;">
+                      Step Ahead Welfare Society
+                    </p>
+                    <p style="margin: 0 0 5px 0;">
+                      Provided free education to underprivileged children, focusing on reducing child labor
+                      and poverty-driven illiteracy.
+                    </p>
+                    <div class="dotted-line" style="position: relative; top: 0px;"></div>
+                  </div>
+                
+                  <!-- Volunteer Mentor & Educator -->
+                  <div style="margin-bottom: 8px;">
+                    <p style="margin: 0; font-weight: bold; color: #000; font-size: 1em;">
+                      Volunteer Mentor &amp; Educator
+                    </p>
+                    <p style="margin: 0 0 4px 0; color: #00b5cb; font-weight: bold;">
+                      Abatis
+                    </p>
+                    <p style="margin: 0 0 4px 0;">
+                      Assisted students facing financial and educational barriers by providing guidance on 
+                      career and academic choices. Conducted workshops in schools to support students in 
+                      exam preparation and career planning.
+                    </p>
+                    <div class="dotted-line" style="position: relative; top: 0px;"></div>
+                  </div>
+                
+                  <!-- Head of Management -->
+                  <div style="margin-bottom: 8px;">
+                    <p style="margin: 0; font-weight: bold; color: #000; font-size: 1em;">
+                      Head of Management
+                    </p>
+                    <p style="margin: 0 0 4px 0; color: #00b5cb; font-weight: bold;">
+                      ASME Student Chapter
+                    </p>
+                    <p style="margin: 0 0 4px 0;">
+                      Led the organizational and strategic planning of technical events, workshops, and
+                      engineering competitions.
+                    </p>
+                  </div>
+                </div>
+                
+               <!-- STRENGTHS -->
+               <div style="font-family: Arial, sans-serif;">
+                  <!-- Section Title -->
+                  <div style="font-size: 1.2em; font-weight: bold; margin-bottom: 5px; text-transform: uppercase;">
+                    Strengths
+                  </div>
+                  <!-- Solid Line Under Title -->
+                  <div style="height: 2px; background: #000; margin-bottom: 15px;"></div>
+                
+                  <!-- Analytical Thinking & Problem-Solving -->
+                  <div style="margin-bottom: 10px; display: flex; align-items: center; gap: 8px;">
+                    <i class="fa-solid fa-chart-column" style="color: #00b5cb; font-size: 1.2em;"></i>
+                    <p style="margin: 0; font-weight: bold;">Analytical Thinking &amp; Problem-Solving</p>
+                  </div>
+                  <div class="dotted-line" style="position: relative; bottom: 5px;"></div>
+                
+                  <!-- Cross-Functional Teamwork -->
+                  <div style="margin-bottom: 10px; display: flex; align-items: center; gap: 8px;">
+                    <i class="fa-solid fa-users" style="color: #00b5cb; font-size: 1.2em;"></i>
+                    <p style="margin: 0; font-weight: bold;">Cross-Functional Teamwork</p>
+                  </div>
+                  <div class="dotted-line" style="position: relative; bottom: 5px;"></div>
+                
+                  <!-- Effective Communication -->
+                  <div style="margin-bottom: 10px; display: flex; align-items: center; gap: 8px;">
+                    <i class="fa-solid fa-comments" style="color: #00b5cb; font-size: 1.2em;"></i>
+                    <p style="margin: 0; font-weight: bold;">Effective Communication</p>
+                  </div>
+                  <div class="dotted-line" style="position: relative; bottom: 5px;"></div>
+                
+                  <!-- Adaptability -->
+                  <div style="margin-bottom: 10px; display: flex; align-items: center; gap: 8px;">
+                    <i class="fa-solid fa-handshake" style="color: #00b5cb; font-size: 1.2em;"></i>
+                    <p style="margin: 0; font-weight: bold;">Adaptability</p>
+                  </div>
+                </div>
+                
+            </div>
+            <!-- END RIGHT COLUMN -->
+         </div>
+         <!-- END CONTENT COLUMNS -->
+      </div>
+      <!-- END RESUME-CONTAINER -->
+   </body>
+</html>
